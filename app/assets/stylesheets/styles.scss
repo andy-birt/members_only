@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Trade+Winds&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0;
+}
+
+header {
+  background: #1e774f;
+  height: 50px;
+  line-height: 3;
+  overflow: hidden;
+  li {
+    a {
+    padding: 16px 15px;
+    position: relative;
+      &:hover:after{
+        height: 5px;
+        bottom: 2px;
+        background: #fff;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 5px;
+        background: #fff;
+        right: 0;
+        bottom: -10px;
+        transition: bottom .2s ease;
+      }
+    }
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: 'Trade Winds', cursive ;
+  font-size: 1.2em;
+  line-height: 2.5em;
+  float: left;
+}
+
+.header-menu{
+  float: right;
+  li {
+    float: left;
+    display: block;
+  }
+}
+
+label {
+  line-height: 2.5em;
+  display: block;
+}
+
+input[name]:not([name="commit"]) {
+  width: 100%;
+}
+
+.success, .danger {
+  margin: 10px 0;
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.success {
+  border-color:#69aa69;
+  color:#016a01;
+  background-color:#79f079;
+}
+
+.danger, .field_with_errors {
+  border-color:#ee7d7d;
+  color:#900000;
+  background-color:#fd9595;
+}
+
+.button {
+  background: #1e774f;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+}

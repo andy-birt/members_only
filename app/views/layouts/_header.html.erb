@@ -1,0 +1,14 @@
+<header>
+  <div class="container">
+    <%= link_to "Trash Poster", root_path, class: "logo" %>
+    <ul class="header-menu">
+      <% if current_user %>
+        <li><%= link_to "Profile", edit_user_path(current_user) %></li>
+        <li><%= link_to "Log out", logout_path, method: :delete %>
+      <% else %>
+        <li><%= link_to "Create account", signup_path %></li>
+        <li><%= link_to "Login", login_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
