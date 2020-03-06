@@ -1,0 +1,7 @@
+<% @posts.each do |p| %>
+  <div class="post">
+    <h2><%= p.title %></h2>
+    <p><%= p.text %></p>
+    <span>Posted by <%= current_user ? p.user.name : "Sally Slappers" %></span>
+  </div>
+<% end %>
